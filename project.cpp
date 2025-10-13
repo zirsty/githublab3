@@ -1,7 +1,5 @@
-#include <iostream>
-using namespase std;
-
-int main(){
-    cout<<"Hello, world!";
-    return 0;
+#include<iostream>
+using namespace std;
+main(){
+    cout<<"Привет!"<<endl;
 }
