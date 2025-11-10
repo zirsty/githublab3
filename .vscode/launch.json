@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Asus/GithubLaba3",
-      "program": "c:/Users/Asus/GithubLaba3/build/Debug/outDebug",
+      "cwd": "c:/Users/Asus/Desktop/програмирование/лаб 1",
+      "program": "c:/Users/Asus/Desktop/програмирование/лаб 1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
