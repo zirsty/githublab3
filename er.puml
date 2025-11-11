@@ -1,0 +1,66 @@
+@startuml
+skinparam shadowing false
+skinparam linetype ortho
+
+entity "MOVIE" as movie {
+  *id : INTEGER <<PK>>
+  --
+  title : TEXT
+  genre : TEXT
+  duration_min : INTEGER
+  age_rating : TEXT
+  description : TEXT
+}
+
+entity "HALL" as hall {
+  *id : INTEGEREGER <<PK>>
+  --
+  number : INTEGER
+  capacity : INTEGER
+}
+
+entity "SESSION" as session {
+  *id : TEXT <<PK>>
+  --
+  movie_id : TEXT <<FK>>
+  hall_id : TEXT <<FK>>
+  session_date : INTEGER
+  start_time : INTEGER
+  end_time : INTEGER
+  price : INTEGER
+}
+
+entity "TICKET" as ticket {
+  *id : INTEGER <<PK>>
+  --
+  session_id : INTEGER <<FK>>
+  row : INTEGER
+  seat : INTEGER
+  visitor_id : INTEGER <<FK>>
+  purchase_datetime : TEXT
+  final_price : INTEGER
+}
+
+entity "VISITOR" as visitor {
+  *id : INTEGER <<PK>>
+  --
+  last_name : TEXT
+  first_name : TEXT
+  phone : TEXT
+}
+
+entity "ADMINISTRATOR" as admin {
+  *id : INTEGER <<PK>>
+  --
+  name : TEXT
+  login : TEXT
+}
+
+
+movie ||--o{ session : ""
+hall ||--o{ session : ""
+session ||--o{ ticket : ""
+visitor ||--o{ ticket : ""
+admin ||--o{ session : ""
+
+@enduml
