@@ -1,0 +1,96 @@
+- ticket_id: 1
+  row: 5
+  seat: 12
+  purchase_datetime: '2025-11-15T10:30:00'
+  final_price: 850
+  session:
+    id: sess1
+    date: '2025-11-16'
+    start_time: '14:00'
+    end_time: '16:08'
+    price: 850
+  movie:
+    title: Общество мертвых поэтов
+    genre: Комедия,драма
+    duration_min: 128
+    age_rating: 16+
+    description: фильм про школьников поэтов с крутым учителем, типо Мартына
+  hall:
+    number: 1
+    capacity: 120
+  visitor:
+    last_name: Ушачини
+    first_name: Димитрини
+    phone: '+79992255986'
+- ticket_id: 2
+  row: 5
+  seat: 13
+  purchase_datetime: '2025-11-15T10:30:00'
+  final_price: 850
+  session:
+    id: sess1
+    date: '2025-11-16'
+    start_time: '14:00'
+    end_time: '16:08'
+    price: 850
+  movie:
+    title: Общество мертвых поэтов
+    genre: Комедия,драма
+    duration_min: 128
+    age_rating: 16+
+    description: фильм про школьников поэтов с крутым учителем, типо Мартына
+  hall:
+    number: 1
+    capacity: 120
+  visitor:
+    last_name: Соловьев
+    first_name: Тимофей
+    phone: '+79999999999'
+- ticket_id: 3
+  row: 3
+  seat: 8
+  purchase_datetime: '2025-11-16T09:15:00'
+  final_price: 950
+  session:
+    id: sess2
+    date: '2025-11-16'
+    start_time: '18:00'
+    end_time: '20:16'
+    price: 950
+  movie:
+    title: Матрица
+    genre: Фантастика
+    duration_min: 136
+    age_rating: 18+
+    description: Там главный герой из фортнайта, норм боевичок на вечер.
+  hall:
+    number: 2
+    capacity: 80
+  visitor:
+    last_name: Ванин
+    first_name: Роман
+    phone: все семерки
+- ticket_id: 4
+  row: 3
+  seat: 9
+  purchase_datetime: '2025-11-16T09:15:00'
+  final_price: 950
+  session:
+    id: sess2
+    date: '2025-11-16'
+    start_time: '18:00'
+    end_time: '20:16'
+    price: 950
+  movie:
+    title: Матрица
+    genre: Фантастика
+    duration_min: 136
+    age_rating: 18+
+    description: Там главный герой из фортнайта, норм боевичок на вечер.
+  hall:
+    number: 2
+    capacity: 80
+  visitor:
+    last_name: Ушачини
+    first_name: Димитрини
+    phone: '+79992255986'

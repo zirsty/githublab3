@@ -64,6 +64,6 @@
 ## 2 Use case диаграмма
 ![alt text](image-3.png)
 ## 3 Блок схема
-![alt text](image-4.png)
+![alt text](image.png)
 ## ER диаграмма
 ![alt text](image-2.png)
