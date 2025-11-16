@@ -62,8 +62,10 @@
 | **Билет** | `id`, `сеанс_id`, `ряд`, `место`, `статус`, `посетитель_id`, `дата_продажи`, `цена_итоговая` |
 | **Посетитель** | `id`, `фамилия`, `имя`, `отчество`, `дата_рождения`, `телефон`, `email` |
 ## 2 Use case диаграмма
-![alt text](image-3.png)
+<img width="697" height="453" alt="image" src="https://github.com/user-attachments/assets/1356f51e-4eb5-4569-9d94-9a6116b60f4f" />
+
 ## 3 Блок схема
-![alt text](image.png)
+![alt text](image-1.png)
 ## ER диаграмма
-![alt text](image-2.png)
+
+<img width="583" height="630" alt="image" src="https://github.com/user-attachments/assets/8bf73a73-e6b5-4946-8038-7b7bb2a4758c" />
