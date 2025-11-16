@@ -13,7 +13,7 @@ entity "MOVIE" as movie {
 }
 
 entity "HALL" as hall {
-  *id : INTEGEREGER <<PK>>
+  *id : INTEGER <<PK>>
   --
   number : INTEGER
   capacity : INTEGER

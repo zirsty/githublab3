@@ -65,8 +65,7 @@
 <img width="697" height="453" alt="image" src="https://github.com/user-attachments/assets/1356f51e-4eb5-4569-9d94-9a6116b60f4f" />
 
 ## 3 Блок схема
-<img width="875" height="656" alt="image" src="https://github.com/user-attachments/assets/48db8f4f-2108-467a-93c6-5767b0807912" />
-
+![alt text](image-1.png)
 ## ER диаграмма
 
 <img width="583" height="630" alt="image" src="https://github.com/user-attachments/assets/8bf73a73-e6b5-4946-8038-7b7bb2a4758c" />
