@@ -37,7 +37,8 @@ def main():
     CREATE TABLE ADMINISTRATOR (
         id INTEGER PRIMARY KEY,
         name TEXT NOT NULL,
-        login TEXT NOT NULL UNIQUE
+        login TEXT NOT NULL UNIQUE,
+        password TEXT NOT NULL
     );
 
     CREATE TABLE SESSION (
@@ -86,8 +87,8 @@ def main():
     ]
 
     admins = [
-        (1, "Алеша", "alex228"),
-        (2, "Славик", "Andruha")
+        (1, "Алеша", "alex228",'qwerty123456'),
+        (2, "Славик", "Andruha",'password228')
     ]
 
     base_date = int(datetime(2025, 11, 16).timestamp())
@@ -113,7 +114,7 @@ def main():
 
     cursor.executemany("INSERT INTO MOVIE VALUES (?, ?, ?, ?, ?, ?)", movies)
     cursor.executemany("INSERT INTO HALL VALUES (?, ?, ?)", halls)
-    cursor.executemany("INSERT INTO ADMINISTRATOR VALUES (?, ?, ?)", admins)
+    cursor.executemany("INSERT INTO ADMINISTRATOR VALUES (?, ?, ?,?)", admins)
     cursor.executemany("INSERT INTO SESSION VALUES (?, ?, ?, ?, ?, ?, ?)", sessions)
     cursor.executemany("INSERT INTO VISITOR VALUES (?, ?, ?, ?)", visitors)
     cursor.executemany("INSERT INTO TICKET VALUES (?, ?, ?, ?, ?, ?, ?)", tickets)

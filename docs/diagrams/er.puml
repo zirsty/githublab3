@@ -54,6 +54,7 @@ entity "ADMINISTRATOR" as admin {
   --
   name : TEXT
   login : TEXT
+  password : TEXT
 }
 
 
