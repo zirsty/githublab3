@@ -64,7 +64,8 @@
 | **Админ** | `id`, `имя`, `логин`, `пароль` |
 
 ## 2 Use case диаграмма
-<img width="466" height="303" alt="image" src="https://github.com/user-attachments/assets/c0d7bd9d-1fab-4f36-b228-180fa5fdc239" />
+<img width="466" height="308" alt="image" src="https://github.com/user-attachments/assets/720877e8-3d8c-443e-9c3f-8b6461c6c726" />
+
 
 
 ## 3 Блок схема
@@ -74,6 +75,7 @@
 
 
 <img width="466" height="529" alt="image" src="https://github.com/user-attachments/assets/30b69259-9c66-44a5-9714-0ae7372ba4ee" />
+
 
 
 
