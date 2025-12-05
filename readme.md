@@ -64,12 +64,18 @@
 | **Админ** | `id`, `имя`, `логин`, `пароль` |
 
 ## 2 Use case диаграмма
+<img width="466" height="308" alt="image" src="https://github.com/user-attachments/assets/7312cb5f-b92d-4070-bbb3-d5d349863e89" />
+
 
 
 ## 3 Блок схема
+<img width="466" height="349" alt="image" src="https://github.com/user-attachments/assets/77e7ac0e-3d58-4bc3-bc51-a3f9d4428bc8" />
 
 
 
-## ER диаграмма
+## 4 ER диаграмма
+<img width="466" height="529" alt="image" src="https://github.com/user-attachments/assets/795dcac3-7afd-4c93-becc-89b879192b84" />
+
+
 
 
