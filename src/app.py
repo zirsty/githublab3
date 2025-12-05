@@ -13,7 +13,7 @@ def db_query(query, params=(), fetch=True):
     cur.execute("PRAGMA foreign_keys = ON")
     cur.execute(query, params)
     if fetch:
-        result = cur.fetchall()  # ← обычные кортежи, как было всегда
+        result = cur.fetchall()
     else:
         result = None
     conn.commit()
@@ -45,15 +45,9 @@ def visitor_login(parent):
         phone = e_phone.get().strip()
         age_str = e_age.get().strip()
 
-        # Ультра-валидация имени и фамилии
         def valid_name(s):
             if not s:
                 return False
-            # Только буквы, пробелы и дефисы, но:
-            # — начинается с буквы
-            # — не заканчивается на дефис или пробел
-            # — нет двух дефисов подряд
-            # — нет цифр и спецсимволов
             return bool(re.fullmatch(r"[А-ЯЁA-Z][А-ЯЁA-Zа-яёa-z\s-]*[А-ЯЁA-Zа-яёa-z]", s))
 
         if not valid_name(last):
@@ -67,8 +61,7 @@ def visitor_login(parent):
         if not valid_name(first):
             messagebox.showerror("Ошибка", 
                 "Некорректное имя!\n"
-                "Разрешено: только буквы, пробел и дефис\n"
-                "Примеры: Александр, Анна-Мария, Жан-Поль")
+                "Разрешено: только буквы, пробел и дефис")
             return
 
         if not all([phone, age_str]):
@@ -88,7 +81,6 @@ def visitor_login(parent):
             messagebox.showerror("Ошибка", "Неверный номер телефона\nПример: +79123456789")
             return
 
-        # Остальной код (сохранение в базу) — без изменений
         exists = db_query("SELECT id, age FROM VISITOR WHERE phone=?", (norm,))
         if exists:
             vid, db_age = exists[0]
@@ -142,7 +134,6 @@ def open_sessions_window(parent):
             free = cap - taken
             tree.insert("", "end", values=(sid, title, hall, date, time_str, f"{price}₽", f"{free}/{cap}", rating))
 
-    # САМЫЙ НАДЁЖНЫЙ СПОСОБ — ДВОЙНОЙ КЛИК РАБОТАЕТ ВСЕГДА
     def on_double_click(event):
         item_id = tree.focus()
         if not item_id:
@@ -154,12 +145,9 @@ def open_sessions_window(parent):
 
     tree.bind("<Double-1>", on_double_click)
 
-    # Чтобы строка выделялась при клике
-    tree.bind("<Button-1>", lambda e: "break")  # отключаем стандартное поведение
+    tree.bind("<Button-1>", lambda e: "break")
     tree.bind("<Button-1>", lambda e: tree.selection_set(tree.identify_row(e.y)))
 
-    # Кнопки — ОСТАВЬ ТОЛЬКО ОДНУ ПАНЕЛЬ!
-        # Кнопки — ОДНА ПАНЕЛЬ, всё работает
     btn_frame = tk.Frame(win)
     btn_frame.pack(pady=12)
     tk.Button(btn_frame, text="Обновить расписание", command=refresh, width=22, bg="#ff9800", fg="white").pack(side="left", padx=15)
@@ -180,7 +168,6 @@ def open_seats(parent, session_id):
 
     title, hall_num, capacity, price, date, st, end, age_rating = info
 
-    # Проверка возраста
     rating_num = 0
     if age_rating.endswith("+"):
         try:
@@ -197,15 +184,12 @@ def open_seats(parent, session_id):
     win.configure(bg="#f5f5f5")
     win.grab_set()
 
-    # Заголовок
     tk.Label(win, text=title, font=("Segoe UI", 22, "bold"), bg="#f5f5f5").pack(pady=(20, 5))
     tk.Label(win, text=f"Зал {hall_num} • {date} • {st//60:02d}:{st%60:02d}–{end//60:02d}:{end%60:02d} • {price}₽ • {age_rating}",
              font=("Segoe UI", 11), fg="#555", bg="#f5f5f5").pack(pady=(0, 20))
 
-    # Экран
     tk.Label(win, text="ЭКРАН", bg="#222", fg="white", font=("Arial", 14), height=2).pack(fill="x", padx=100, pady=(0, 30))
 
-    # Определяем сетку
     if capacity <= 80:
         rows, cols = 8, 10
     elif capacity <= 100:
@@ -267,7 +251,6 @@ def open_seats(parent, session_id):
 
     update_seats()
 
-    # Легенда
     bottom = tk.Frame(win, bg="#f5f5f5")
     bottom.pack(pady=30, fill="x")
     
