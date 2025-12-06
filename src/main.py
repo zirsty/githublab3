@@ -72,7 +72,6 @@ def create_database():
     );
     """)
 
-    # ОСТАВЛЯЕМ ТОЛЬКО ЗАЛЫ И АДМИНА
     halls = [(1,1,120),(2,2,80),(3,3,100),(4,4,150),(5,5,60)]
     admins = [(1, "Славик", "andruha", "vlados")]
 
@@ -83,4 +82,5 @@ def create_database():
     conn.close()
 
 if __name__ == "__main__":
+
     create_database()
